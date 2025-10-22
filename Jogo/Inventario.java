@@ -61,8 +61,13 @@ public class Inventario implements Cloneable {
 
     @Override
     public Inventario clone() {
-        return new Inventario(this);
+        Inventario copia = new Inventario();
+        for (Item item : this.itens.values()) {
+            copia.adicionar(item.clone()); // usa o clone de Item
+        }
+        return copia;
     }
+
 
     @Override
     public String toString() {

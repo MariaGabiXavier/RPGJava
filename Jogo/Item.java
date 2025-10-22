@@ -6,6 +6,7 @@ public class Item implements Comparable<Item>, Cloneable {
     private String efeito; // ex: "cura25", "atk+3", "shield"
     private int quantidade;
 
+
     public Item(String nome, String descricao, String efeito, int quantidade) {
         this.nome = nome;
         this.descricao = descricao;

@@ -1,8 +1,7 @@
 public class Dustin extends Personagem {
-    // Dustin tem defesa um pouco maior e inventário inicial maior (representa itens úteis)
+    // Stats rebalanceados para Nível 0
     public Dustin(String nome) {
-        super(nome, 30, 7, 6, 1);
-        // itens iniciais poderiam ser adicionados em Jogo
+        super(nome, 20, 5, 5, 0); // HP baixo, Ataque baixo, Defesa alta
     }
     public Dustin() { this("Dustin"); }
     public Dustin(Dustin d) { super(d); }
