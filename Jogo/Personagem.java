@@ -15,7 +15,7 @@ public abstract class Personagem implements Cloneable {
 
 
     // Nível Máximo Definido
-    public static final int NIVEL_MAXIMO = 4; 
+    public static final int NIVEL_MAXIMO = 3; 
 
     public Personagem(String nome, int pontosVida, int ataque, int defesa, int nivelInicial) {
         this.nome = nome;
@@ -30,7 +30,7 @@ public abstract class Personagem implements Cloneable {
         this.experienciaProximoNivel = calcularProximoNivelXP(nivelInicial);
     }
 
-    // Nível inicial padrão agora é 0
+    
     public Personagem() { this("SemNome", 20, 5, 3, 1); } 
 
     public Personagem(Personagem outro) {
@@ -69,10 +69,9 @@ public abstract class Personagem implements Cloneable {
     public int rolarDado() { return rng.nextInt(20) + 1; }
 
     // MÉTODOS DE NÍVEL
-
     private int calcularProximoNivelXP(int nivelAtual) {
         if (nivelAtual >= NIVEL_MAXIMO) return 0;
-        return 100 * (int) Math.pow(2, nivelAtual);
+        return 80 * nivelAtual;
     }
 
     public void ganharExperiencia(int xpGanha) {
@@ -122,7 +121,7 @@ public abstract class Personagem implements Cloneable {
         System.out.printf("  LEVEL UP! %s alcançou o Nível %d! \n", this.nome, this.nivel);
         System.out.println("----------------------------------------");
 
-        // Aumenta os status (exemplo de valores)
+        // Aumenta os status 
         int aumentoHP = 5;
         int aumentoAtaque = 2;
         int aumentoDefesa = 1;

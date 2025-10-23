@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     private Scanner scanner = new Scanner(System.in);
     private Personagem jogador;
-    private Personagem checkpoint; // <- guarda o último ponto salvo
+    private Personagem checkpoint; 
     private Random rng = new Random();
 
     public static void main(String[] args) {

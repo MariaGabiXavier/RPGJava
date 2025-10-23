@@ -18,7 +18,7 @@ public class Inimigo extends Personagem {
         this("Demogorgon", 20, 6, 3, 1, 50);
     }
 
-    // Construtor de cópia (para checkpoints, saves, etc.)
+    // Construtor de cópia (para checkpoints)
     public Inimigo(Inimigo outro) {
         super(outro);
         this.xpDrop = outro.xpDrop;
