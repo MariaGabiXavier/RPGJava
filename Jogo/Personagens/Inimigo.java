@@ -29,14 +29,4 @@ public class Inimigo extends Personagem {
     public int getValorExperiencia() {
         return this.xpDrop;
     }
-
-    // Representação textual 
-    @Override
-    public String toString() {
-        return String.format(
-            "%s [HP: %d, Atk: %d, Def: %d, Nível: %d, XP: %d, Itens: %s]",
-            nome, pontosVida, ataque, defesa, nivel, xpDrop,
-            inventario != null ? inventario.toString() : "<sem itens>"
-        );
-    }
 }
